@@ -2,3 +2,10 @@ img.logo {
   filter: invert(100%);
   padding-top: 5px;
 }
+
+CartWidget {
+  height: 10px;
+  
+}
+
+style={{width: '50%'}}
