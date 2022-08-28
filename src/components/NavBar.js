@@ -1,5 +1,4 @@
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
 
 const NavBar = () => {
     return (<>
@@ -26,6 +25,5 @@ const NavBar = () => {
   </nav>
     </>)
 }
-
 
 export default NavBar;
