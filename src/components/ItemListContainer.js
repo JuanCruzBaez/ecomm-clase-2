@@ -1,15 +1,22 @@
-import ItemCount from "./ItemCount";
+import ItemList from "../utils/ItemList";
+import CustomFetch from "../utils/CustomFetch";
+import { useEffect, useState } from "react";
+import Data from "../utils/Data";
 
 const ItemListContainer = ({greeting}) => {
+    const [datos, setDatos] = useState([]);
     
-    const onAdd = (qty) => {
-      alert("You have selected " + qty + " items.");
-    }
+    useEffect(() => {
+      CustomFetch(2000, Data)
+          .then(result => setDatos(result))
+          .catch(err => console.log(err))
+    })
+    
     
     return(
       <>
         <h1>{greeting}</h1>
-        <ItemCount stock={5} initial={1} onAdd={onAdd} />
+        <ItemList items={datos}/>
       </>
     );
 }

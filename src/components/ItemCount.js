@@ -25,7 +25,6 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     return(
     <>
     <div className="counter">
-      <h1>Contador</h1>
       <span className="counter__output">{count}</span>
       <div className="btn__container">
         <button className="control__btn" onClick={increment}>+</button>
@@ -33,12 +32,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
         <button className="reset" onClick={reset}>Reset</button>
       </div>
     </div>
-
-    
-    
-    </>
-        
-        
+    </> 
     );
 }
 
