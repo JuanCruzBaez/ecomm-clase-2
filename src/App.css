@@ -37,8 +37,9 @@ CartWidget {
 
 .control__btn {
   font-size: 20px;
-  padding: 1px 15px;
-  background-color: transparent;
+  padding: 3px;
+  background-color: green;
+  width: 15px;
   color: rgb(16, 0, 54);
   border: 1px solid rgb(16, 0, 54);
   cursor: pointer;
@@ -66,4 +67,9 @@ CartWidget {
   background-color: rgb(16, 0, 54);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(16, 0, 54);
+}
+
+.product-wrapper {
+  display: flex;
+  align-items: center;
 }

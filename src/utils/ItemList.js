@@ -18,12 +18,11 @@ const ItemList = ( {items}) => {
           {
             products.map(product => (
             <>
-            <Item name={product.name} brand={product.brand} />
-            <h4>{product.name + " " + product.brand}</h4>
-            <h4>Precio : ${product.price}</h4>
+            <div className="product-wrapper">
+            <Item item={product} />
+            <ItemCount initial={1} stock={product.stock} />
+            </div>
             <hr />
-            <h5><ItemCount stock={5} initial={1} stock={product.stock} /></h5>
-            <img src={product.image} alt="" width="300" height="300"/>
             </>
             ))
           }

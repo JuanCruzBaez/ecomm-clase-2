@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from 'react-bootstrap';
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     const[count, setCount] = useState(0);   
@@ -27,9 +28,9 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     <div className="counter">
       <span className="counter__output">{count}</span>
       <div className="btn__container">
-        <button className="control__btn" onClick={increment}>+</button>
-        <button className="control__btn" onClick={decrement}>-</button>
-        <button className="reset" onClick={reset}>Reset</button>
+        <Button onClick={increment}>+</Button>
+        <Button onClick={decrement}>-</Button>
+        <Button onClick={reset}>Reset</Button>
       </div>
     </div>
     </> 
