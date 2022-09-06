@@ -20,7 +20,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
         }
     }
 
-    const reset = () =>{
+    const addToCart = () =>{
         setCount(0)
       }
     return(
@@ -28,9 +28,9 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     <div className="counter">
       <span className="counter__output">{count}</span>
       <div className="btn__container">
-        <Button onClick={increment}>+</Button>
         <Button onClick={decrement}>-</Button>
-        <Button onClick={reset}>Reset</Button>
+        <Button onClick={increment}>+</Button>
+        <Button onClick={addToCart}>Añadir el carrito</Button>
       </div>
     </div>
     </> 

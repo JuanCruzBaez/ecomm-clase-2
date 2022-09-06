@@ -2,13 +2,12 @@ import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 
 
-
 const Item = ({ item }) => {
 
     return (
         <>
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={item.image}/>
+          <Card.Img className='card-box' src={item.image}/>
           <Card.Body>
             <Card.Title>{item.name} {item.brand}</Card.Title>
             <Card.Text>
