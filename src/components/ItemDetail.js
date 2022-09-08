@@ -1,4 +1,4 @@
-import ItemCount from "../components/ItemCount";
+import ItemCount from "./ItemCount";
 import { DetailContainer, ImageDetail, ImgContainer, InfoContainer, Title, WrapperDetail, Desc, Price } from "./styledComponents";
 
 

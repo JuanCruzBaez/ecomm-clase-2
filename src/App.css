@@ -78,3 +78,13 @@ CartWidget {
   height: 300px;
   padding: 10px 20px;
 }
+
+.button-link {
+  text-decoration: none;
+  color: white;
+}
+
+.button-link:hover {
+  text-decoration: none;
+  color: white;
+}
