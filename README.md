@@ -27,4 +27,4 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ## Estructura
 
-![estructura] (https://raw.githubusercontent.com/JuanCruzBaez/react-ecomm-coderhouse/master/assets/estructura.png)
+![estructura] (https://raw.githubusercontent.com/JuanCruzBaez/react-ecomm-coderhouse/master/assets/img/estructura.png)
