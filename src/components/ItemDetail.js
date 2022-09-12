@@ -1,10 +1,16 @@
 import ItemCount from "./ItemCount";
 import { DetailContainer, ImageDetail, ImgContainer, InfoContainer, Title, WrapperDetail, Desc, Price } from "./styledComponents";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
+
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items. ");
+        setItemCount(qty);
     }
 
     return(
@@ -23,7 +29,11 @@ const ItemDetail = ({ item }) => {
                         <Price>$ {item.price}</Price>
                         <Desc>{item.stock} unidades disponibles</Desc>
                     </InfoContainer>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    {   
+                    itemCount === 0
+                        ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Link to='/cart' style={{textDecoration: "none"}}><Button variant="danger">CheckOut</Button></Link>
+                    }     
                 </WrapperDetail>
             </DetailContainer>
             :<p>Cargando...</p>

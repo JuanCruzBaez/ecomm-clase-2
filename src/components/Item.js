@@ -19,7 +19,7 @@ const Item = ({ item }) => {
               <Button variant="primary"><Link className="button-link" to={`/item/${item.id}`}>Ver detalle del producto</Link></Button>
             </Card.Body>
           </Card>
-          <ItemCount initial={1} stock={item.stock} />
+          {/* <ItemCount initial={1} stock={item.stock} /> */}
         </div>
         <hr />
         </>

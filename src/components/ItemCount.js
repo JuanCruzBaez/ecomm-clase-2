@@ -10,19 +10,16 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
     const increment = () => {
         if (count < stock) {
-            setCount(count +1);
+            setCount(count + 1);
         }
     }
 
     const decrement = () => {
         if (count > initial) {
-            setCount(count -1)
+            setCount(count - 1)
         }
     }
 
-    const addToCart = () =>{
-        setCount(0)
-      }
     return(
     <>
     <div className="counter">
@@ -30,7 +27,11 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
       <div className="btn__container">
         <Button onClick={decrement}>-</Button>
         <Button onClick={increment}>+</Button>
-        <Button onClick={addToCart}>Añadir el carrito</Button>
+        {
+            stock && count
+            ? <Button variant="primary" onClick={() => onAdd(count)}>Add to Cart</Button>
+            : <Button variant="secondary" disabled>Add to Cart</Button>
+        }
       </div>
     </div>
     </> 
