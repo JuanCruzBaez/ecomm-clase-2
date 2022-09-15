@@ -37,6 +37,10 @@ const Price  = styled.span`
     font-size: 40px;
 `;
 
+const Qty = styled.p`
+    margin: 20px 0px;
+`;
+
 export { 
-    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price
+    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price, Qty
 }

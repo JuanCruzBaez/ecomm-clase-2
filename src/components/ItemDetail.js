@@ -1,16 +1,19 @@
 import ItemCount from "./ItemCount";
 import { DetailContainer, ImageDetail, ImgContainer, InfoContainer, Title, WrapperDetail, Desc, Price } from "./styledComponents";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "react-bootstrap";
+import { CartContext } from "./CartContext";
 
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext)
 
     const onAdd = (qty) => {
         alert("Has seleccionado " + qty + " productos. ");
         setItemCount(qty);
+        test.addItem(item, qty);
     }
 
     return(
@@ -24,8 +27,8 @@ const ItemDetail = ({ item }) => {
                         <ImageDetail src={item.image} />
                     </ImgContainer>
                     <InfoContainer>
-                        <Title>{item.name}</Title>
-                        <Desc>{item.brand}</Desc>
+                        <Title>{item.name} {item.brand}</Title>
+                        <Desc></Desc>
                         <Price>$ {item.price}</Price>
                         <Desc>{item.stock} unidades disponibles</Desc>
                     </InfoContainer>
