@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="main-footer">
+    <div className="main-footer" >
       <div className="container">
         <div className="row">
           {/* Column1 */}
@@ -17,10 +17,10 @@ function Footer() {
           {/* Column2 */}
           <div className="col">
             <h4>INFO</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>CURSO REACT</li>
               <li>CODERHOUSE 2022</li>
-            </ui>
+            </ul>
           </div>
         </div>
         <hr />

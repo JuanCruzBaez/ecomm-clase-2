@@ -10,7 +10,7 @@ const ItemListContainer = ({greeting}) => {
     
     useEffect(() => {
         if (id) {
-        CustomFetch(250, Data.filter(item => item.categoryId == id))
+        CustomFetch(250, Data.filter(item => item.categoryId === parseInt(id)))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
         } else {

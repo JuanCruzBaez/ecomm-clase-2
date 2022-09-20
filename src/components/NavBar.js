@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import images from "../assets/images";
-import { Button } from "react-bootstrap";
 
 const NavBar = () => {
     return (<>
@@ -25,9 +24,8 @@ const NavBar = () => {
         </li>
     </ul>
       </div>
-      <Button type="button" className="btn btn-light fs-5 text-primary"><i className="bi bi-cart3"></i>4</Button>
+      <CartWidget />
     </div>
-    <CartWidget />
   </nav>
     </>)
 }

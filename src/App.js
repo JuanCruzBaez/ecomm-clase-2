@@ -18,11 +18,7 @@ const App = () => {
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
-        <div className="page-container">
-          <div className="content-wrap">
-          </div>
-          <Footer />
-        </div>
+        <Footer />
       </BrowserRouter>
       </CartContextProvider>
     );

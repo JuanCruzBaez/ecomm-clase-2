@@ -32,11 +32,17 @@ const ItemDetail = ({ item }) => {
                         <Price>$ {item.price}</Price>
                         <Desc>{item.stock} unidades disponibles</Desc>
                     </InfoContainer>
-                    {   
+                    {
+                        itemCount === 0 && <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                    }
+                    {
+                        itemCount !== 0 && <Link to='/cart' style={{textDecoration: "none"}}><Button variant="danger">CHECKOUT</Button></Link>
+                    }
+                    {/* {   
                     itemCount === 0
                         ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
                         : <Link to='/cart' style={{textDecoration: "none"}}><Button variant="danger">CHECKOUT</Button></Link>
-                    }     
+                    }   */}   
                 </WrapperDetail>
             </DetailContainer>
             :<p>Cargando...</p>

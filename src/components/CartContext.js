@@ -12,7 +12,10 @@ const CartContextProvider = ({children}) => {
         }
 
         if(!isInCart(item.id)) {
-            setCartList([...cartList, itemForCart])
+            setCartList([
+                ...cartList,
+                itemForCart
+            ])
         } else {
             const itemForCart = cartList.map(prod => {
                    
@@ -50,10 +53,47 @@ const CartContextProvider = ({children}) => {
         setCartList([])
     }
 
+
+    const calcTotalPerItem = (idItem) => {
+        let index = cartList.map(item => item.id).indexOf(idItem);
+        return cartList[index].price * cartList[index].qty;
+    }
+
+     const calcSubTotal = () => {
+        if (cartList.length !== 0) {
+            let totalPerItem = cartList.map(item => calcTotalPerItem(item.id));
+            return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue)
+
+        }
+        
+    }
+
+    const calcTotal = () => {
+        return calcSubTotal();
+    }
+
+
+    const calcItemsQty = () => {
+        let qtys = cartList.map(item => item.qty); 
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
+    const displayItemNumber = () => {
+        const number = calcItemsQty()
+        return (number <= 0 ? null : number)
+    }
+
+    const endTransaction = () => {
+        alert("Gracias por su compra")
+        clear() 
+    }
+
     return (
-        <CartContext.Provider value={{cartList, addItem, removeItem, clear}}>
+        
+        <CartContext.Provider value={{cartList, addItem, removeItem, clear, calcTotal, calcItemsQty, calcSubTotal, calcTotalPerItem, displayItemNumber, endTransaction}}>
             {children}  
         </CartContext.Provider>
+        
     );
 }
 

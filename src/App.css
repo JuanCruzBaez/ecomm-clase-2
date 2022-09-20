@@ -72,6 +72,7 @@ CartWidget {
 .product-wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .card-box {
@@ -90,9 +91,9 @@ CartWidget {
 }
 
 .page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 50vh;
+  /* display: flex;
+  flex-direction: column; */
+  min-height: calc(100vh - 55px);
 }
 
 .content-wrap {
@@ -108,4 +109,16 @@ CartWidget {
   font-size: 100%;
   padding: 10px 20px;
   
+}
+
+.empty-cart-message{
+  margin-top: 2em;
+  text-align: center;
+}
+
+
+.item-list-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
 }
