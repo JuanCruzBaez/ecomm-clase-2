@@ -1,8 +1,7 @@
-import CustomFetch from "../utils/CustomFetch";
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import Data from "../utils/Data";
 import { useParams } from "react-router-dom";
+import { oneItemFetch } from "../utils/firebaseConfig";
 
 
 const ItemDetailContainer = () => {
@@ -10,10 +9,10 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
     
     useEffect(() => {
-      CustomFetch(250, Data.find(item => item.id === parseInt(id)))
-          .then(result => setDato(result))
-          .catch(err => console.log(err))
-    },[]);
+      oneItemFetch(id)
+            .then(result => setDato(result))
+            .catch(err => console.log(err))
+    }, [id]);
     
     return (
         <ItemDetail item={dato} />

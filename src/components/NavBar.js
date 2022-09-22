@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import images from "../assets/images";
+
 
 const NavBar = () => {
     return (<>
     <nav className="navbar navbar-dark bg-dark">
     <div className="container-fluid">
-      <Link className="navbar-brand" to='/'><img src={images.img9} alt="" width="30" height="24" className="d-inline-block align-text-top logo" />
-      Tech House</Link>
+      <Link className="navbar-brand" to='/'><i className="bi bi-mouse2"></i>
+      {" Tech House"}</Link>
       <div>
         <ul className="nav justify-content-center">
         <li className="nav-item">
