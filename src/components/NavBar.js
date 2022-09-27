@@ -20,7 +20,7 @@ const NavBar = () => {
             <Link className="nav-link text-light" to='/category/15'>Auriculares y microfonos</Link>  
         </li>
         <li className="nav-item">
-            <Link className="nav-link text-light" to='/category/10'>Monitores</Link>  
+            <Link className="nav-link text-light" to='/category/10'>Monitores y Televisores</Link>  
         </li>
     </ul>
       </div>
