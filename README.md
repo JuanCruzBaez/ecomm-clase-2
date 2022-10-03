@@ -25,6 +25,10 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ### Sino copiar esta URL y pegarla en el navegador: `http://localhost:3000`
 
+
+## Backend
+
+Backend realizado con Firebase, para descargar y correr este proyecto deben generar su backend en Firebase.
 ## Estructura
 
 ![estructura](https://github.com/JuanCruzBaez/react-ecomm-coderhouse/blob/master/src/assets/img/estructura.png)
